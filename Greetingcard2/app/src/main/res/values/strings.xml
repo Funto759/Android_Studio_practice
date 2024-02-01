@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Greeting card</string>
+    <string name="name">Name</string>
+    <string name="toppings">TOPPINGS</string>
+    <string name="whipped_cream">Whipped cream</string>
+    <string name="chocolate">Chocolate</string>
+    <string name="quantity">QUANTITY</string>
+    <string name="addition">+</string>
+    <string name="_0">0</string>
+    <string name="order">ORDER</string>
+    <string name="_00" />
+    <string name="order_summary">order summary</string>
+    <string name="minus">-</string>
+</resources>
