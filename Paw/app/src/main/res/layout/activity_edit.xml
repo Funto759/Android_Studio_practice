@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditActivity">
+
+    <!-- Layout for the editor -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:context=".EditorActivity">
+
+        <!-- Overview category -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Name"
+            android:layout_marginBottom="20dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            android:theme="@style/Theme.MaterialComponents.Light">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxBackgroundMode="none"
+            android:hint="Name"
+            android:theme="@style/Platform.MaterialComponents.Light">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/enName"
+            android:inputType="textCapWords"
+            android:paddingHorizontal="10dp"
+            android:textSize="15sp"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Breed"
+            android:layout_marginBottom="20dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            android:theme="@style/Theme.MaterialComponents.Light">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                app:boxBackgroundMode="none"
+                android:hint="Breed"
+                android:theme="@style/Platform.MaterialComponents.Light">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:inputType="textCapWords"
+                    android:paddingHorizontal="10dp"
+                    android:textSize="15sp"
+                    android:id="@+id/enBreed"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Gender category -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Gender"
+            android:layout_marginBottom="20dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            android:theme="@style/Theme.MaterialComponents.Light">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/enGender"
+                app:boxBackgroundMode="none"
+                android:hint="Gender"
+                android:theme="@style/Platform.MaterialComponents.Light">
+
+              <Spinner
+                  android:id="@+id/spinner_gender"
+                  android:layout_height="48dp"
+                  android:layout_width="wrap_content"
+                  android:paddingRight="16dp"
+                  android:spinnerMode="dropdown"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height= "wrap_content"
+            android:orientation="horizontal">
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/Weight"
+            android:layout_marginBottom="20dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            android:theme="@style/Theme.MaterialComponents.Light">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                app:boxBackgroundMode="none"
+                android:hint="Measurement"
+                android:theme="@style/Platform.MaterialComponents.Light">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:inputType="number"
+                    android:paddingHorizontal="10dp"
+                    android:textSize="15sp"
+                    android:id="@+id/enWeight"/>
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+        </com.google.android.material.card.MaterialCardView>
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:id="@+id/label_weight_units"
+                android:text="@string/unit_pet_weight"
+                style="@style/EditorUnitsStyle"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
